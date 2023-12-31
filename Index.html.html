@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        .input-button-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .input-button-container img {
+            width: 50px;
+            /* Adjust the width as needed */
+            height: auto;
+            /* This keeps the aspect ratio of the image */
+            margin-left: 10px;
+            /* Adds some space between the input box and the image */
+        }
+    </style>
+    <style>
+        body {
+            background-color: #43766C;
+            /* Sage Green */
+            color: white;
+            font-family: sans-serif;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>Special Message</title>
+    <!-- Add your CSS link here if needed -->
+</head>
+
+<body>
+    <h2>Enter Your Name and Press The Cat for a Special Message</h2>
+    <div class="input-button-container">
+        <input type="text" id="nameInput" placeholder="Enter your name">
+        <img src="CatButton.png" alt="Cat Button" onclick="showMessage()" style="cursor: pointer;">
+    </div>
+
+    <p id="personalMessage"></p>
+
+    <script>
+        function showMessage() {
+            var name = document.getElementById('nameInput').value;
+            var message;
+
+            if (name === 'Sophie') {
+                message = "Hello Sophie, Mike wants you to not worry or stress about anything, you're amazing, he's amazing, and no matter what happens everything will be alright :)";
+            } else {
+                message = "Wrong name, stinky bum! Try again.";
+            }
+            document.getElementById('personalMessage').textContent = message;
+        }
+    </script>
+</body>
+
+</html>
